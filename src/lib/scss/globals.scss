@@ -1,0 +1,41 @@
+@use './mixins' as *;
+
+body {
+	font-family: 'Kumbh Sans', sans-serif;
+}
+
+main {
+	padding-bottom: 4rem;
+}
+
+button {
+	color: inherit;
+}
+
+input {
+	&::placeholder {
+		color: var(--accentTextContrast);
+	}
+}
+
+.container {
+	max-width: 69.375rem;
+	margin-inline: auto;
+	padding-inline: 1.5rem;
+}
+
+.main-bar {
+	transform: translateY(-2.5rem);
+}
+
+@include md-bp {
+	.container {
+		padding-inline: 2.438rem;
+	}
+}
+
+@include lg-bp {
+	.container {
+		padding-inline: 0;
+	}
+}
